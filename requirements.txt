@@ -1,0 +1,6 @@
+# Third-party libraries used in lessons (e.g., Lesson 13)
+requests>=2.31.0
+
+# Development tools for learning good code standards (PEP-8)
+black>=24.0.0
+flake8>=7.0.0

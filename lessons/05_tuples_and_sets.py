@@ -1,3 +1,11 @@
+import sys
+# Force UTF-8 encoding for Windows terminal emoji support
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass
+
 """
 =============================================================
   LESSON 05: Tuples and Sets 🎯

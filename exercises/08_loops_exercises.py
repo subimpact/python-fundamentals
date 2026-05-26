@@ -1,3 +1,11 @@
+import sys
+# Force UTF-8 encoding for Windows terminal emoji support
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass
+
 """
   EXERCISE 08: Loops
   Run: python exercises/08_loops_exercises.py
@@ -44,4 +52,40 @@ numbers = [2, 5, 11, 14, 18, 21, 28, 42, 50]
 # TODO:
 
 
+# ============================================================
+# 🧪 AUTOMATED CHECKER (No cheat ah!)
+# ============================================================
+print("\n" + "="*55)
+print("🧐 Checking your answers... Let's see if can pass or not...")
+print("="*55)
+errors = 0
+
+def check_var(name, expected_type, check_fn=None, missing_msg=None, type_msg=None, val_msg=None):
+    global errors
+    if name not in globals() and name not in locals():
+        print(f"❌ {name}: {missing_msg or 'Ayo, variable not found! Did you delete it?'}")
+        errors += 1
+        return False
+    val = globals().get(name, locals().get(name))
+    if expected_type is not None and not isinstance(val, expected_type):
+        print(f"❌ {name}: {type_msg or f'Wrong type! Should be {expected_type.__name__}, got {type(val).__name__} lah.'}")
+        errors += 1
+        return False
+    if check_fn is not None and not check_fn(val):
+        print(f"❌ {name}: {val_msg or 'Ayo, answer is wrong! Try again.'}")
+        errors += 1
+        return False
+    print(f"✅ {name}: Steady lah! Passed.")
+    return True
+
+# Check Exercise 2
+check_var("total", int, check_fn=lambda v: v == 5050, val_msg="total sum from 1 to 100 should be 5050!")
+
+print("="*55)
+if errors == 0:
+    print("🎉 TAHNIAH! All checks passed! Loop-de-loop and pass! 🔄")
+else:
+    print(f"⚠️ Alamak, got {errors} error(s). Review loops condition! ☕")
+print("="*55)
 print("🏃 Check: python solutions/08_loops_solutions.py")
+

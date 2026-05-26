@@ -60,17 +60,42 @@ Practice what you've learned! Each exercise has `# TODO` markers for you to fill
    cd python-fundamentals
    ```
 
-2. **Read and run lessons in order:**
+2. **Set up a Virtual Environment (venv) — *Sangat Recommended!* 🛡️**
+   To avoid polluting your global system packages, create and activate a Python virtual environment:
+   
+   * **Windows (PowerShell):**
+     ```powershell
+     python -m venv venv
+     .\venv\Scripts\Activate.ps1
+     ```
+   * **Windows (Command Prompt):**
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate.bat
+     ```
+   * **macOS / Linux:**
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Read and run lessons in order:**
    ```bash
    python lessons/00_hello_python.py
    python lessons/01_variables_and_types.py
    # ... and so on
    ```
+   *(Need to verify if your console output matches what it should? Check [EXPECTED_OUTPUTS.md](EXPECTED_OUTPUTS.md)!)*
 
-3. **Try the exercises:**
+5. **Try the exercises:**
    ```bash
    # Open the exercise file, fill in the TODOs
-   # Then run it to test your answers:
+   # Then run it. There are built-in Malaysian checkers to guide you!
    python exercises/01_variables_exercises.py
 
    # Check the solutions when you're done:
@@ -79,9 +104,9 @@ Practice what you've learned! Each exercise has `# TODO` markers for you to fill
 
 ### Recommended Workflow
 1. 📖 Read the lesson file (it's heavily commented — just read it like a book!)
-2. ▶️ Run the lesson to see the output
+2. ▶️ Run the lesson and verify your output matches [EXPECTED_OUTPUTS.md](EXPECTED_OUTPUTS.md)
 3. 🧪 Try modifying the code to experiment
-4. ✏️ Do the matching exercise
+4. ✏️ Do the matching exercise and run it to trigger the automated checker
 5. ✅ Check the solution
 6. ➡️ Move to the next lesson
 
