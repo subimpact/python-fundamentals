@@ -56,7 +56,7 @@ Practice what you've learned! Each exercise has `# TODO` markers for you to fill
 
 1. **Clone this repo:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/python-fundamentals.git
+   git clone https://github.com/subimpact/python-fundamentals.git
    cd python-fundamentals
    ```
 
