@@ -185,3 +185,8 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 ---
 
 **Happy coding! Jom belajar Python! 🐍🚀**
+
+### Share This Project
+
+[Share on X (Twitter)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20Python%20Fundamentals%20repo%20by%20@subimpact!&url=https://github.com/subimpact/python-fundamentals) | 
+[Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/subimpact/python-fundamentals)
