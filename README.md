@@ -110,6 +110,17 @@ Practice what you've learned! Each exercise has `# TODO` markers for you to fill
 5. ✅ Check the solution
 6. ➡️ Move to the next lesson
 
+### ⏱️ Estimated Playthrough Duration
+For absolute beginners, here is a realistic guide on how long it takes to finish this course:
+* **Per Topic (Lesson + Exercise + Solution)**: **~30 to 45 minutes**
+  * *15-20 mins*: Read the lesson file, run it, and experiment.
+  * *15-25 mins*: Code the exercise, debug with the checker, and review the solution.
+* **Full Repository Playthrough**: **6 to 8 hours** of total hands-on learning.
+
+**📅 Recommended Learning Paths:**
+* **The "Teh Tarik" Weekend Sprint ☕**: Dedicate 3-4 hours on Saturday and Sunday. You'll be coding comfortably by Sunday night!
+* **The Self-Paced Mamak Plan 🍛**: Do 2 topics a day (approx. 1 hour total). You'll finish everything in exactly one week, confirm steady!
+
 ---
 
 ## 🎯 Who Is This For?
