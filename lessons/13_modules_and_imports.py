@@ -276,6 +276,16 @@ print("  flask     — Lightweight web framework")
 print("  pytest    — Testing framework")
 print("  numpy     — Numerical computing")
 
+# Quick requests demo (commented out — install it first!)
+# pip install requests
+#
+# import requests
+# response = requests.get("https://api.github.com")
+# print(f"GitHub API says: {response.json()['current_user_url']}")
+# print(f"Status code: {response.status_code}")
+#
+# That's it — one line to fetch a webpage, one line to read the JSON!
+
 
 # ============================================================
 # PART 9: Creating Your Own Module

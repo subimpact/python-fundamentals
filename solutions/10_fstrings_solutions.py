@@ -11,11 +11,13 @@ if sys.platform == "win32":
 """
 print("Exercise 1:")
 price = 42.5
-print(f"Price: RM{price:.2f}")
+price_str = f"Price: RM{price:.2f}"
+print(price_str)
 
 print("\nExercise 2:")
 population = 32365999
-print(f"Population: {population:,}")
+population_str = f"Population: {population:,}"
+print(population_str)
 
 print("\nExercise 3:")
 items = [
@@ -24,19 +26,21 @@ items = [
     ("Teh Tarik", 1.80, 5),
     ("Maggi Goreng", 7.00, 1),
 ]
-print(f"  {'Item':<15} {'Price':>8} {'Qty':>5} {'Total':>9}")
-print(f"  {'─' * 40}")
+table = f"  {'Item':<15} {'Price':>8} {'Qty':>5} {'Total':>9}\n"
+table += f"  {'─' * 40}\n"
 grand_total = 0
 for name, price, qty in items:
     total = price * qty
     grand_total += total
-    print(f"  {name:<15} RM{price:>5.2f} {qty:>5} RM{total:>6.2f}")
-print(f"  {'─' * 40}")
-print(f"  {'Grand Total':<15} {'':>8} {'':>5} RM{grand_total:>6.2f}")
+    table += f"  {name:<15} RM{price:>5.2f} {qty:>5} RM{total:>6.2f}\n"
+table += f"  {'─' * 40}\n"
+table += f"  {'Grand Total':<15} {'':>8} {'':>5} RM{grand_total:>6.2f}"
+print(table)
 
 print("\nExercise 4:")
 pass_rate = 0.8725
-print(f"Pass rate: {pass_rate:.1%}")
+percent_str = f"Pass rate: {pass_rate:.1%}"
+print(percent_str)
 
 print("\nExercise 5:")
 fruits = ["durian", "rambutan", "mangosteen", "papaya"]

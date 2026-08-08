@@ -2,6 +2,11 @@
 
 **Learn Python from zero to hero — Malaysian style! 🇲🇾**
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Exercises](https://img.shields.io/badge/Exercises-10-orange)
+![Lessons](https://img.shields.io/badge/Lessons-14-blue)
+
 A complete, beginner-friendly Python learning guide with hands-on lessons, exercises, and solutions. Written in fun Malaysian English so you won't fall asleep reading code. Confirm shiok one!
 
 ---
@@ -24,7 +29,7 @@ Each lesson is a standalone `.py` file you can read and run. No Jupyter needed!
 | 08 | [Loops](lessons/08_loops.py) | for, while, break, continue, enumerate, zip |
 | 09 | [Functions](lessons/09_functions.py) | def, return, *args, **kwargs, lambda, scope |
 | 10 | [f-strings & Formatting](lessons/10_fstrings_and_formatting.py) | f-strings, .format(), .join(), alignment |
-| 11 | [File I/O](lessons/11_file_io.py) | Reading, writing, appending, CSV, JSON |
+| 11 | [File I/O](lessons/11_file_io.py) | Reading, writing, appending, CSV |
 | 12 | [Error Handling](lessons/12_error_handling.py) | try/except, raising, custom exceptions |
 | 13 | [Modules & Imports](lessons/13_modules_and_imports.py) | Standard library, pip, creating modules |
 
@@ -102,6 +107,17 @@ Practice what you've learned! Each exercise has `# TODO` markers for you to fill
    python solutions/01_variables_solutions.py
    ```
 
+### Optional: Check your code style (PEP-8)
+
+`requirements.txt` includes `black` and `flake8` so you can learn good code standards from day one:
+
+```bash
+black --check lessons/    # Is your code formatted the standard way?
+flake8 exercises/         # Any style or logic warnings?
+```
+
+You don't need to use them to finish the course — but learning them early makes your code look professional.
+
 ### Recommended Workflow
 1. 📖 Read the lesson file (it's heavily commented — just read it like a book!)
 2. ▶️ Run the lesson and verify your output matches [EXPECTED_OUTPUTS.md](EXPECTED_OUTPUTS.md)
@@ -139,7 +155,8 @@ python-fundamentals/
 ├── README.md              ← You are here!
 ├── LICENSE                ← MIT License
 ├── .gitignore             ← Git ignore rules
-├── C1M1_Ungraded_Lab_1.ipynb  ← Original notebook reference
+├── EXPECTED_OUTPUTS.md    ← What each lesson should print
+├── rubric_scoring.md      ← The 20-point beginner-friendliness rubric
 ├── lessons/               ← 14 lesson files (read + run these!)
 │   ├── 00_hello_python.py
 │   ├── 01_variables_and_types.py

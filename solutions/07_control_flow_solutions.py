@@ -24,15 +24,18 @@ else:
 print(f"Score {score} → Grade: {grade}")
 
 print("\nExercise 2: FizzBuzz")
-for i in range(1, 21):
-    if i % 3 == 0 and i % 5 == 0:
-        print("FizzBuzz", end=" ")
-    elif i % 3 == 0:
-        print("Fizz", end=" ")
-    elif i % 5 == 0:
-        print("Buzz", end=" ")
+def fizzbuzz(n):
+    if n % 3 == 0 and n % 5 == 0:
+        return "FizzBuzz"
+    elif n % 3 == 0:
+        return "Fizz"
+    elif n % 5 == 0:
+        return "Buzz"
     else:
-        print(i, end=" ")
+        return n
+
+for i in range(1, 21):
+    print(fizzbuzz(i), end=" ")
 print()
 
 print("\nExercise 3:")
@@ -46,13 +49,16 @@ is_leap = (year % 4 == 0) and (year % 100 != 0 or year % 400 == 0)
 print(f"{year} is a leap year: {is_leap}")
 
 print("\nExercise 5:")
+def login(username, password):
+    if username == "admin" and password == "python123":
+        return "success"
+    elif username == "admin":
+        return "wrong password"
+    else:
+        return "unknown user"
+
 username = "admin"
 password = "python123"
-if username == "admin" and password == "python123":
-    print("✅ Login successful! Welcome, admin!")
-elif username == "admin":
-    print("❌ Wrong password!")
-else:
-    print("❌ Username not found!")
+print(login(username, password))
 
 print("\n✅ All exercises solved!")

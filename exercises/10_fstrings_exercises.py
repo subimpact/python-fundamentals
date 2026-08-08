@@ -13,12 +13,12 @@ if sys.platform == "win32":
 
 # Exercise 1: Format this price to 2 decimal places with RM prefix
 price = 42.5
-# TODO: print(f"???")  # Expected: "Price: RM42.50"
+# TODO: price_str = f"???"  # Expected: "Price: RM42.50"
 
 
 # Exercise 2: Format this large number with comma separators
 population = 32365999
-# TODO: print(f"???")  # Expected: "Population: 32,365,999"
+# TODO: population_str = f"???"  # Expected: "Population: 32,365,999"
 
 
 # Exercise 3: Create a formatted table from this data
@@ -29,31 +29,31 @@ items = [
     ("Teh Tarik", 1.80, 5),
     ("Maggi Goreng", 7.00, 1),
 ]
+# TODO: table = ""  # build the table string (see solution for reference)
 # Expected output (something like):
 #   Item             Price    Qty    Total
 #   ─────────────────────────────────────
 #   Nasi Lemak       RM 5.50    2   RM11.00
 #   Roti Canai       RM 2.50    3   RM 7.50
 #   ...
-# TODO:
 
 
 # Exercise 4: Format this decimal as a percentage
 pass_rate = 0.8725
-# TODO: print(f"???")  # Expected: "Pass rate: 87.3%"  (1 decimal place)
+# TODO: percent_str = f"???"  # Expected: "Pass rate: 87.2%"  (1 decimal place)
 
 
 # Exercise 5: Using .join(), create a comma-separated string from this list
 # But the last item should use "and" instead of a comma
 fruits = ["durian", "rambutan", "mangosteen", "papaya"]
 # Expected: "durian, rambutan, mangosteen and papaya"
-# TODO:
+# TODO: result = ???
 
 
 # Exercise 6: Create a multi-line receipt using f-strings
 # Include: store name, items, subtotal, tax (6%), total
 # Make it look professional with proper alignment!
-# TODO:
+# TODO: receipt = ???
 
 
 # ============================================================
@@ -82,6 +82,18 @@ def check_var(name, expected_type, check_fn=None, missing_msg=None, type_msg=Non
     print(f"✅ {name}: Steady lah! Passed.")
     return True
 
+# Check Exercise 1
+check_var("price_str", str, check_fn=lambda v: v == "Price: RM42.50", val_msg="price_str should be 'Price: RM42.50' — did you use :.2f?")
+
+# Check Exercise 2
+check_var("population_str", str, check_fn=lambda v: v == "Population: 32,365,999", val_msg="population_str should be 'Population: 32,365,999' — did you use the comma format specifier (,)? ")
+
+# Check Exercise 3
+check_var("table", str, check_fn=lambda v: "Nasi Lemak" in v and "Grand Total" in v, val_msg="table should contain item names AND a 'Grand Total' row!")
+
+# Check Exercise 4
+check_var("percent_str", str, check_fn=lambda v: v == "Pass rate: 87.2%", val_msg="percent_str should be 'Pass rate: 87.2%' — did you use :.1%? (0.8725 rounds to 87.2% not 87.3%!)")
+
 # Check Exercise 5
 check_var("result", str, check_fn=lambda v: v.replace(" ", "") == "durian,rambutan,mangosteenandpapaya".replace(" ", ""), val_msg="result string values are incorrect! Check join or string concatenation.")
 
@@ -95,4 +107,3 @@ else:
     print(f"⚠️ Alamak, got {errors} error(s). Align your formatters and try again! ☕")
 print("="*55)
 print("🏃 Check: python solutions/10_fstrings_solutions.py")
-
